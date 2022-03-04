@@ -1,0 +1,47 @@
+{
+    "name": "wovoschool/laravel-setting",
+    "description": "Persistent settings package for Laravel",
+    "keywords": [
+        "laravel",
+        "persistent",
+        "settings",
+        "config"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "bishwajitcadhikary",
+            "email": "bishwajitcadhikary@gmail.com",
+            "homepage": "https://wovoschool.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "laravel/framework": ">=5.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": ">=4.8",
+        "mockery/mockery": "0.9.*"
+    },
+    "autoload": {
+    "psr-4": {
+            "WovoSchool\\Setting\\": "./src"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "WovoSchool\\Setting\\SettingServiceProvider"
+            ],
+            "aliases": {
+                "Setting": "WovoSchool\\Setting\\Facade"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
